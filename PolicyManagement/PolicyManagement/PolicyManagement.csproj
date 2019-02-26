@@ -9,7 +9,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{0E29E68A-E6B7-4F12-BD0E-1116A5FF1FB0}</ProjectGuid>
+    <ProjectGuid>{0CEE467C-0820-4534-A5FA-D8C4890A5601}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -133,12 +133,12 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <EntityDeploy Include="Models\Policies.edmx">
+    <EntityDeploy Include="Models\PolicyManagement.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Policies.Designer.cs</LastGenOutput>
+      <LastGenOutput>PolicyManagement.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Models\Policies.edmx.diagram">
-      <DependentUpon>Policies.edmx</DependentUpon>
+    <Content Include="Models\PolicyManagement.edmx.diagram">
+      <DependentUpon>PolicyManagement.edmx</DependentUpon>
     </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -149,15 +149,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
-    <Content Include="Models\Policies.Context.tt">
+    <Content Include="Models\PolicyManagement.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Policies.edmx</DependentUpon>
-      <LastGenOutput>Policies.Context.cs</LastGenOutput>
+      <DependentUpon>PolicyManagement.edmx</DependentUpon>
+      <LastGenOutput>PolicyManagement.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\Policies.tt">
+    <Content Include="Models\PolicyManagement.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Policies.edmx</DependentUpon>
-      <LastGenOutput>Policies.cs</LastGenOutput>
+      <DependentUpon>PolicyManagement.edmx</DependentUpon>
+      <LastGenOutput>PolicyManagement.cs</LastGenOutput>
     </Content>
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
@@ -169,23 +169,23 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Policies.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Policies.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Policies.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Policies.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Policies.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Policies.edmx</DependentUpon>
-    </Compile>
     <Compile Include="Models\Policy.cs">
-      <DependentUpon>Policies.tt</DependentUpon>
+      <DependentUpon>PolicyManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PolicyManagement.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PolicyManagement.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PolicyManagement.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PolicyManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PolicyManagement.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PolicyManagement.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -208,9 +208,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>58507</DevelopmentServerPort>
+          <DevelopmentServerPort>51682</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:58507/</IISUrl>
+          <IISUrl>http://localhost:51682/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

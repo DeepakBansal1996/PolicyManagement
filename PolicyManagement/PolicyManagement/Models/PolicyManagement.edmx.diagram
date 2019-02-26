@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="eca9f2a9ac924affb081ec21a1d83943" Name="Diagram1">
+      <Diagram DiagramId="2bd3c75b6be64537b35c0b22945bda46" Name="Diagram1">
         <EntityTypeShape EntityType="PolicyManagementModel.Policy" Width="1.5" PointX="3.875" PointY="1" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>

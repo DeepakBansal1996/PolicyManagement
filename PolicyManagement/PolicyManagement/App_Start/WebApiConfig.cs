@@ -12,7 +12,6 @@ namespace PolicyManagement
         {
             var cors = new EnableCorsAttribute("*", "*", "*");
             config.EnableCors(cors);
-
             config.MapHttpAttributeRoutes();
 
             config.Routes.MapHttpRoute(

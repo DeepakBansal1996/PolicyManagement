@@ -32,7 +32,6 @@ c:\users\ravi.sharma\documents\visual studio 2015\Projects\PolicyManagement\Poli
 c:\users\ravi.sharma\documents\visual studio 2015\Projects\PolicyManagement\PolicyManagement\bin\Microsoft.AI.WindowsServer.xml
 c:\users\ravi.sharma\documents\visual studio 2015\Projects\PolicyManagement\PolicyManagement\bin\Microsoft.ApplicationInsights.xml
 c:\users\ravi.sharma\documents\visual studio 2015\Projects\PolicyManagement\PolicyManagement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-c:\users\ravi.sharma\documents\visual studio 2015\Projects\PolicyManagement\PolicyManagement\obj\Debug\PolicyManagement.csprojResolveAssemblyReference.cache
 c:\users\ravi.sharma\documents\visual studio 2015\Projects\PolicyManagement\PolicyManagement\obj\Debug\PolicyManagement.dll
 c:\users\ravi.sharma\documents\visual studio 2015\Projects\PolicyManagement\PolicyManagement\obj\Debug\PolicyManagement.pdb
 c:\users\ravi.sharma\documents\visual studio 2015\Projects\PolicyManagement\PolicyManagement\bin\Newtonsoft.Json.dll
@@ -46,3 +45,6 @@ c:\users\ravi.sharma\documents\visual studio 2015\Projects\PolicyManagement\Poli
 c:\users\ravi.sharma\documents\visual studio 2015\Projects\PolicyManagement\PolicyManagement\bin\System.Web.Http.xml
 c:\users\ravi.sharma\documents\visual studio 2015\Projects\PolicyManagement\PolicyManagement\bin\System.Web.Http.Cors.xml
 c:\users\ravi.sharma\documents\visual studio 2015\Projects\PolicyManagement\PolicyManagement\bin\System.Web.Http.WebHost.xml
+C:\Users\ravi.sharma\Documents\Visual Studio 2015\Projects\PolicyManagement\PolicyManagement\obj\Debug\PolicyManagement.csprojAssemblyReference.cache
+C:\Users\ravi.sharma\Documents\Visual Studio 2015\Projects\PolicyManagement\PolicyManagement\obj\Debug\PolicyManagement.csproj.CoreCompileInputs.cache
+C:\Users\ravi.sharma\Documents\Visual Studio 2015\Projects\PolicyManagement\PolicyManagement\obj\Debug\PolicyManagement.csproj.CopyComplete

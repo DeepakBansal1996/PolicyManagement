@@ -22,7 +22,6 @@
                     
                         <button class="btn btn-success btn-lg " style="float: right;" data-toggle="modal" data-target="#policyToAdd" id="policybutton">Add Policy</button>
                     
-                     
                 </div>
                 <ul class="list-unstyled components" id="policylist">
    <li> <input type="text" class="form-control ml-4" style="width: 90%;" placeholder="search"></li>
@@ -32,9 +31,6 @@
                                 <tr>
 								<th>Policies</th>
 								</tr>
-                                <tbody>
-
-                                </tbody>
                             </table>
                         </div>
                     </li>
@@ -68,12 +64,12 @@
                                 <h2>Policy NAME</h2>
                             </div>
                             <div class="offset-md-6 col-md-2">
-                                <button class="btn btn-lg btn-warning" style="width: 100%;">
+                                <button class="btn btn-lg btn-warning" style="width: 100%;" data-toggle="modal" data-target="#policytoupdate" onclick="setpolicyvalues()" id="updatebutton">
                                     Update<i class="fas fa-edit ml-2"></i>
                                 </button>
                             </div>
                             <div class="col-md-2">    
-                                <button class="btn btn-lg btn-danger" style="width: 100%;">
+                                <button class="btn btn-lg btn-danger" style="width: 100%;" onclick="deletepolicy()">
                                     Delete<i class="far fa-trash-alt ml-2"></i>
                                 </button>
                             </div>
@@ -84,6 +80,7 @@
                     </div>
                 </div>
             </div>
+			<!-- add Policy Modal  -->
             <div id="policyToAdd" class="modal fade" role="dialog">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -115,6 +112,40 @@
                     </div>
                 </div>
             </div>
+			<!-- add Policy Modal  -->
+			<!-- Update Policy Modal  -->
+			<div id="policytoupdate" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Update Policy</h4>
+                            <button type="button" class="close" data-dismiss="modal" disabled>&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label for="PolicyId">Policy Id</label>
+                                <input type="text" class="form-control" id="updatePolicyId">
+                            </div>
+                            <div class="form-group">
+                                <label for="PolicyName">Policy Name</label>
+                                <input type="text" class="form-control" id="updatePolicyName">
+                            </div>
+                            <div class="form-group">
+                                <label for="description">Policy Description:</label>
+                                <textarea class="form-control" rows="5" id="updatePolicyDescription"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="PolicyId">PDF Link</label>
+                                <input type="text" class="form-control" id="updatePolicyLink">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <input type="button" class="btn btn-primary" onclick="updatepolicy()" value="Update Policy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+			<!-- Update Policy Modal  Ends here-->
         </div>
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
