@@ -25,7 +25,7 @@ var CurrentName;
 var CurrentDescription;
 var CurrentLink;
 
-function setvariables(id,name, desc, link){
+function setvariables(id ,name, desc, link){
 	
 	CurrentId=id;
 	CurrentName=name;
@@ -35,53 +35,58 @@ function setvariables(id,name, desc, link){
 	console.log(CurrentName);
 	console.log(CurrentDescription);
 	console.log(CurrentLink);
-	alert(CurrentId);
+	//alert(CurrentId);
+    console.log("in func",CurrentId);
 	//console.log(typeof(CurrentId));	
+     document.getElementById("policyname").innerHTML = 	CurrentName;
+     document.getElementById("policydescription").innerHTML=CurrentDescription;
+    document.getElementById("policylink").innerHTML=CurrentLink;
 }
 
 //Load all the Policies at Loading time
 function loadpolicies(){							
 		$.ajax	({
-		url: "http://localhost:51682/api/Policies/",
+		url: "http://localhost:53541/api/policies/",
 		type: 'GET',
 		dataType: 'json', 
 		success: function (policydata){
 						console.log(policydata);
 						for (var i=0; i<policydata.length; i++){
-						$('<tr><th Id="'+policydata[i]+'" onclick="setvariables('+policydata[i].Id+','+policydata[i].Name+','+policydata[i].Description+','+policydata[i].Link+' )">' + policydata[i].Name + '</th></tr>').appendTo('#policylist');	
-						console.log(policydata[i].Name);
-						}			
+						$('<tr><td Id="'+policydata[i]+'" onclick=\"setvariables(\''+policydata[i].Id+'\',\''+policydata[i].Name+'\',\''+policydata[i].Description+'\',\''+policydata[i].Link+'\' )">' + policydata[i].Name + '</th></tr>').appendTo('#policylist');	
+						}	
+            var d= policydata[0].Name;
+            console.log(d);
+            document.getElementById("policyname").innerHTML = policydata[0].Name;
+                            
 		}
 	});
 }
 
 //Create a new Policy using add policy button
 function addpolicy(){
-		var PolicyId = document.getElementById("PolicyId").value;
+		
 		var PolicyName = document.getElementById("PolicyName").value;
 		var PolicyDescription = document.getElementById("PolicyDescription").value;
 		var PolicyLink = document.getElementById("PolicyLink").value;
-	var datafornewpolicy={
-		"Id" : PolicyId,
+	     var datafornewpolicy={
 		"Name": PolicyName,
 		"Description": PolicyDescription,
 		"Link": PolicyLink,
 	};
 	$.ajax({
-		url: 'http://localhost:51682/api/policies',
+		url: 'http://localhost:53541/api/policies',
         type: 'POST',
         datatype: 'json',
 		data : datafornewpolicy,
         success: function(res)
 						{
 					alert("Policy Has been added successfully");
-					window.location="policies.html";
+					window.location="Policies.html";
 				}				
         });
 }
 
 function setpolicyvalues(){
-		document.getElementById("updatePolicyId").value= CurrentId;
 		document.getElementById("updatePolicyName").value= CurrentName;
 		document.getElementById("updatePolicyDescription").value= CurrentDescription;
 		document.getElementById("updatePolicyLink").value= CurrentLink;
@@ -100,7 +105,7 @@ function updatepolicy(){
 						"Link": PolicyLink,
 					};
 	$.ajax({
-		url: 'http://localhost:51682/api/policies/'+PolicyId,
+		url: 'http://localhost:53541/api/policies/'+PolicyId,
         type: 'PUT',
         datatype: 'json',
 		data : dataforupdatepolicy,
@@ -118,7 +123,7 @@ function deletepolicy(){
 		var Id = CurrentId;
 		console.log(Id);
 	$.ajax({
-		url: 'http://localhost:51682/api/policies/'+Id,
+		url: 'http://localhost:53541/api/policies'+Id,
         type: 'DELETE',
         dataType: 'json',
         success: function(res)
@@ -129,29 +134,21 @@ function deletepolicy(){
         });
 }
 
-
-/*
-{
-						var table=document.getElementById("policylist");
-						var row=table.insertRow(table.length);
-						row.insertCell(0).innerHTML=policydata[i].Name;
-						row.insertCell(1).innerHTML=data[i].ProjectName;
-						row.insertCell(2).innerHTML="<input type='button' value='Click To View' class='editbutton' onclick=\'ThrowId(\""+data[i].Id+"\")'>"
-						row.insertCell(3).innerHTML="<input type='button' value='Click To View' class='deletebutton' onclick=\'ThrowId(\""+data[i].Id+"\")'>"
-
-						console.log(policydata);
-						var obj = JSON.parse(this.policydata);
-						console.log(obj);
-						for (var j=0; j<policydata.length; j++){
-						console.log(obj[j]);
-							
-						}
-						
-						var table =document.getElementById("policylist");
-						for (var i=0; i<policydata.lenght;i++){
-							var row = table.insertRow(table.length);
-							row.insertCell(0).innerHTML = policydata.Name;
-							
-						}
+function searchbox() {
+    var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("policylist");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
 }
-*/

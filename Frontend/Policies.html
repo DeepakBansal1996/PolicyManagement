@@ -24,12 +24,15 @@
                     
                 </div>
                 <ul class="list-unstyled components" id="policylist">
-   <li> <input type="text" class="form-control ml-4" style="width: 90%;" placeholder="search"></li>
+   <li> <input type="text" class="form-control ml-4"  style="width: 90%;" placeholder="Search by Policy Name" id="myInput" onkeyup="searchbox()"></li>
+               
                     <li class="shifting mt-3">
+                       
                         <div class="container">            
                             <table class="table table-hover" id="policylist">
                                 <tr>
 								<th>Policies</th>
+								<td id="li"></td>
 								</tr>
                             </table>
                         </div>
@@ -60,8 +63,8 @@
                     <!--                    END OF NAVIGATION BAR-->
                     <div class="policyContent" >
                         <div class="row">
-                            <div class="col-md-2">
-                                <h2>Policy NAME</h2>
+                            <div class="col-md-2" >
+                                <h2 id="policyname"></h2>
                             </div>
                             <div class="offset-md-6 col-md-2">
                                 <button class="btn btn-lg btn-warning" style="width: 100%;" data-toggle="modal" data-target="#policytoupdate" onclick="setpolicyvalues()" id="updatebutton">
@@ -75,8 +78,8 @@
                             </div>
                         </div>
                         <hr>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto sapiente similique culpa reprehenderit debitis pariatur voluptatum animi sed error voluptate, iste voluptatibus quos sunt tempora explicabo enim at cum Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto sapiente similique culpa reprehenderit debitis pariatur voluptatum animi sed error voluptate, iste voluptatibus quos sunt tempora explicabo enim at cum tenetur.lorem</p>
-                        <a href="#" id="pdf"><i class="fas fa-file-pdf mr-4"></i>Some Link Of PDF</a>
+                        <p id="policydescription"></p>
+                        <a href="#" id=""><h1 class="fas fa-file-pdf mr-4" id="policylink"></h1></a>
                     </div>
                 </div>
             </div>
@@ -89,10 +92,6 @@
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
                         </div>
                         <div class="modal-body">
-                            <div class="form-group">
-                                <label for="PolicyId">Policy Id</label>
-                                <input type="text" class="form-control" id="PolicyId">
-                            </div>
                             <div class="form-group">
                                 <label for="PolicyName">Policy Name</label>
                                 <input type="text" class="form-control" id="PolicyName">
@@ -122,10 +121,6 @@
                             <button type="button" class="close" data-dismiss="modal" disabled>&times;</button>
                         </div>
                         <div class="modal-body">
-                            <div class="form-group">
-                                <label for="PolicyId">Policy Id</label>
-                                <input type="text" class="form-control" id="updatePolicyId">
-                            </div>
                             <div class="form-group">
                                 <label for="PolicyName">Policy Name</label>
                                 <input type="text" class="form-control" id="updatePolicyName">

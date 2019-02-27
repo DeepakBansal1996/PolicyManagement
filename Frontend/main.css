@@ -36,7 +36,7 @@ h3{
 }
 #sidebar ul.components{
     padding: 20px 0px;
-    border-bottom: 1px solid #47748b;
+    border-bottom: 2px solid #47748b;
 }
 #logo{
     max-width: 17rem;
@@ -137,16 +137,33 @@ a#pdf {
     }
 }
 
+#policylist {cursor: pointer;}
 
 
+td:hover,td:active {
+ font-size: 150%;
+    background-color: lightgray;
+}
 
+{}
 
+td{
+    width:100%;
+    font-weight: lighter;
+}
 
-
-
-
-
-
+#myInput{ 
+  
+    background-image: url('images/searchicon.png');
+background-repeat:no-repeat;
+background-position: 10px 12px;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+    height: auto;
+}
 
 
 
